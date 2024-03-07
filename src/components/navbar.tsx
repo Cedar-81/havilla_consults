@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { AlignCenter } from "lucide-react";
+import { easeInOut, motion } from "framer-motion";
 
 function Navbar() {
   const [showNav, setShowNav] = useState(false);
@@ -107,12 +108,24 @@ function Navbar() {
           </NavLink>
         </li>
         <li>
-          <a
+          <motion.a
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: { delay: 1, ease: easeInOut, duration: 0.5 },
+            }}
+            whileTap={{ scale: 0.9 }}
+            whileHover={{
+              scale: 1.1,
+              backgroundColor: "white",
+              color: "#C3995D",
+              border: "2px solid #C3995D",
+            }}
             href="mailto:about@havillaconsults.com"
-            className="btn text-white bg-gold"
+            className="btn text-white bg-gold font-semibold hover:shadow-lg border-2 border-transparent"
           >
             CONTACT US
-          </a>
+          </motion.a>
         </li>
       </ul>
       <AlignCenter

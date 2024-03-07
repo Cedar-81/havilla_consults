@@ -64,7 +64,23 @@ function Info() {
             our commitment is to stand by you through this exciting,
             life-changing adventure.
           </p>
-          <button className="btn bg-purple text-white">GET IN TOUCH</button>
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: { delay: 1.5, ease: easeInOut, duration: 0.5 },
+            }}
+            whileTap={{ scale: 0.9 }}
+            whileHover={{
+              scale: 1.1,
+              border: "2px solid #522989",
+              backgroundColor: "transparent",
+              color: "#522989",
+            }}
+            className="btn bg-purple hover:shadow-lg text-white"
+          >
+            GET IN TOUCH
+          </motion.button>
         </motion.div>
         <motion.div
           variants={{
