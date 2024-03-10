@@ -53,7 +53,7 @@ function Hero() {
           >
             BOOK A CONSULTATION
           </motion.button>
-          <a href="mailto:enquire@havillaconsults.com">
+          <a href="mailto:info@havillaconsults.com">
             <motion.button
               initial={{ opacity: 0 }}
               animate={{
@@ -79,7 +79,7 @@ function Hero() {
         </div>
       </div>
 
-      <a href="mailto:enquire@havillaconsults.com">
+      <a href="mailto:info@havillaconsults.com">
         <motion.div
           initial={{ x: 100, opacity: 0 }}
           animate={{

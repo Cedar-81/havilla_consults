@@ -27,7 +27,7 @@ function Banner2() {
           </h5>
         </div>
         <div>
-          <a href="mailto:enquire@havillaconsults.com">
+          <a href="mailto:info@havillaconsults.com">
             <motion.button
               initial={{ opacity: 0 }}
               animate={{

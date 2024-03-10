@@ -65,7 +65,7 @@ function Info() {
             life-changing adventure.
           </p>
           <div>
-            <a href="mailto:enquire@havillaconsults.com">
+            <a href="mailto:info@havillaconsults.com">
               <motion.button
                 initial={{ opacity: 0 }}
                 animate={{
