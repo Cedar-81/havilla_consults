@@ -121,7 +121,7 @@ function Navbar() {
               color: "#C3995D",
               border: "2px solid #C3995D",
             }}
-            href="mailto:about@havillaconsults.com"
+            href="mailto:enquire@havillaconsults.com"
             className="btn text-white bg-gold font-semibold hover:shadow-lg border-2 border-transparent"
           >
             CONTACT US

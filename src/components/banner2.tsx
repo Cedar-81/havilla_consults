@@ -1,5 +1,6 @@
 import { TextCursorInput } from "lucide-react";
 import React from "react";
+import { easeInOut, motion } from "framer-motion";
 
 function Banner2() {
   return (
@@ -25,9 +26,27 @@ function Banner2() {
             everyone for success.
           </h5>
         </div>
-        <button className="btn text-white bg-purple text-sm md:text-base">
-          CONTACT US
-        </button>
+        <div>
+          <a href="mailto:enquire@havillaconsults.com">
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: { delay: 1.5, ease: easeInOut, duration: 0.5 },
+              }}
+              whileTap={{ scale: 0.9 }}
+              whileHover={{
+                scale: 1.1,
+                border: "2px solid #522989",
+                backgroundColor: "transparent",
+                color: "#522989",
+              }}
+              className="btn text-white bg-purple text-sm md:text-base"
+            >
+              CONTACT US
+            </motion.button>
+          </a>
+        </div>
       </div>
     </section>
   );

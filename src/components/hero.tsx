@@ -53,64 +53,68 @@ function Hero() {
           >
             BOOK A CONSULTATION
           </motion.button>
-          <motion.button
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1,
-              transition: { delay: 1.5, ease: easeIn, duration: 0.5 },
-            }}
-            whileTap={{ scale: 0.9 }}
-            whileHover={{
-              scale: 1.1,
-              backgroundColor: "#522989",
-              color: "white",
-            }}
-            className=" flex relative items-center btn justify-center group overflow-clip hover:shadow-lg transition-all"
-          >
-            <div className="bg-purple relative z-10 text-white group-hover:bg-white group-hover:text-purple rounded-full p-3 mr-4 ">
-              <MousePointerClick className="h-4 w-4 md:h-6 md:w-6" />
-            </div>{" "}
-            <p className="font-semibold relative z-10 text-xs md:text-base">
-              ENQUIRE ABOUT US
-            </p>
-          </motion.button>
+          <a href="mailto:enquire@havillaconsults.com">
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: { delay: 1.5, ease: easeIn, duration: 0.5 },
+              }}
+              whileTap={{ scale: 0.9 }}
+              whileHover={{
+                scale: 1.1,
+                backgroundColor: "#522989",
+                color: "white",
+              }}
+              className=" flex relative items-center btn justify-center group overflow-clip hover:shadow-lg transition-all"
+            >
+              <div className="bg-purple relative z-10 text-white group-hover:bg-white group-hover:text-purple rounded-full p-3 mr-4 ">
+                <MousePointerClick className="h-4 w-4 md:h-6 md:w-6" />
+              </div>{" "}
+              <p className="font-semibold relative z-10 text-xs md:text-base">
+                ENQUIRE ABOUT US
+              </p>
+            </motion.button>
+          </a>
         </div>
       </div>
 
-      <motion.div
-        initial={{ x: 100, opacity: 0 }}
-        animate={{
-          x: 0,
-          opacity: 1,
-          transition: { delay: 1.5, ease: easeInOut, duration: 0.5 },
-        }}
-      >
-        <motion.button
-          animate={bounceAnimation}
-          className="flex absolute z-10 space-x-4 p-4 backdrop-blur-lg bg-transparent bottom-0 right-0 md:left-[35%] md:bottom-[8%] border md:w-max border-purple rounded-md"
+      <a href="mailto:enquire@havillaconsults.com">
+        <motion.div
+          initial={{ x: 100, opacity: 0 }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: { delay: 1.5, ease: easeInOut, duration: 0.5 },
+          }}
         >
-          <img
-            className="h-10 w-10"
-            src="./assets/herogitavatar.png"
-            alt="male avatar"
-          />
-          <div className="flex flex-col text-left space-y-1">
-            <div className="">
-              <h4 className="text-sm md:text-base text-gold font-medium">
-                GET IN TOUCH WITH US
-              </h4>
-              <p className="text-xs md:text-sm font-light">
-                reach out let's have a conversation
-              </p>
+          <motion.button
+            animate={bounceAnimation}
+            className="flex absolute z-10 space-x-4 p-4 backdrop-blur-lg bg-transparent bottom-0 right-0 md:left-[35%] md:bottom-[8%] border md:w-max border-purple rounded-md"
+          >
+            <img
+              className="h-10 w-10"
+              src="./assets/herogitavatar.png"
+              alt="male avatar"
+            />
+            <div className="flex flex-col text-left space-y-1">
+              <div className="">
+                <h4 className="text-sm md:text-base text-gold font-medium">
+                  GET IN TOUCH WITH US
+                </h4>
+                <p className="text-xs md:text-sm font-light">
+                  reach out let's have a conversation
+                </p>
+              </div>
+              <div className="flex space-x-1">
+                <div className="selector-sm"></div>
+                <div className="selector-sm"></div>
+                <div className="selector-sm"></div>
+              </div>
             </div>
-            <div className="flex space-x-1">
-              <div className="selector-sm"></div>
-              <div className="selector-sm"></div>
-              <div className="selector-sm"></div>
-            </div>
-          </div>
-        </motion.button>
-      </motion.div>
+          </motion.button>
+        </motion.div>
+      </a>
 
       <div className="relative w-full h-[28rem] md:static">
         <motion.img
