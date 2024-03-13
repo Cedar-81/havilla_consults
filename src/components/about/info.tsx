@@ -53,7 +53,7 @@ function Info() {
           }}
           initial="hidden"
           animate="show"
-          className="grid grid-cols-2 md:hidden gap-2 space-x-0 w-full md:w-max mmmmmmm"
+          className="grid grid-cols-2 md:hidden gap-2 space-x-0 w-full md:w-max"
         >
           {images.map((item) => (
             <motion.div
