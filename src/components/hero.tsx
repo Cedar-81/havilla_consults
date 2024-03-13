@@ -98,11 +98,11 @@ function Hero() {
               alt="male avatar"
             />
             <div className="flex flex-col text-left space-y-1">
-              <div className="">
-                <h4 className="text-sm md:text-base text-gold font-medium">
+              <div className="-space-y-1">
+                <h4 className="text-sm md:text-base text-gold font-semibold">
                   GET IN TOUCH WITH US
                 </h4>
-                <p className="text-xs md:text-sm font-light">
+                <p className="text-xs md:text-sm font-altDisplay font-medium">
                   reach out let's have a conversation
                 </p>
               </div>
@@ -129,7 +129,7 @@ function Hero() {
           initial={{ y: 1000, opacity: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: easeInOut, duration: 0.7, delay: 1 }}
-          className=" md:h-[90vh] aspect-auto absolute md:right-14 md:bottom-0"
+          className=" md:h-[90vh] aspect-auto absolute md:right-8 md:bottom-0"
           src="./assets/heroimg.png"
           alt="College boy and girl"
         />

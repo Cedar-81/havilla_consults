@@ -24,12 +24,13 @@ function Info() {
             hidden: { opacity: 0 },
             visible: { opacity: 1, transition: { duration: 0.5 } },
           }}
-          className=" md:text-xl text-purple font-medium"
+          className=" md:text-xl text-purple font-semibold font-altDisplay"
         >
-          Havilla Consults focus is to empower individuals for success in a
-          globalized educational landscape, providing comprehensive guidance for
-          academic, personal, and cultural enrichment, aiming to be a catalyst
-          for positive change.
+          <span className="text-2xl md:text-4xl font-bold">H</span>avilla
+          Consults focus is to empower individuals for success in a globalized
+          educational landscape, providing comprehensive guidance for academic,
+          personal, and cultural enrichment, aiming to be a catalyst for
+          positive change.
         </motion.h4>
         <motion.p
           initial="hidden"

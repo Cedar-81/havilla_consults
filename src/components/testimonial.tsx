@@ -1,4 +1,4 @@
-import { TextCursorInput } from "lucide-react";
+import { MessageSquarePlus, TextCursorInput } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import TestimonialCard from "./testimonialcard";
 import sanityClient from "../sanityClient";
@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import "../style.css";
+import TestimonialForm from "./testimonialform";
 
 interface Testimonial {
   _type: "testimonial";
@@ -20,6 +21,7 @@ interface Testimonial {
 
 function Testimonial() {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
     const fetchTestimonials = async () => {
@@ -38,12 +40,23 @@ function Testimonial() {
 
   return (
     <section className="px-8 md:px-[60px] space-y-10">
-      <h4 className="font-semibold flex mx-auto justify-center">
-        <span className="mr-2">
-          <TextCursorInput className="text-gold" />
-        </span>
-        Testimonial
-      </h4>
+      <div className="w-full flex justify-between items-center">
+        <h4 className="font-semibold flex">
+          <span className="mr-2">
+            <TextCursorInput className="text-gold" />
+          </span>
+          Testimonial
+        </h4>
+        <button
+          onClick={() => setShowForm(true)}
+          className="btn text-xs md:text-sm underline underline-offset-2 decoration-purple animate-pulse font-semibold flex items-start"
+        >
+          <MessageSquarePlus className="h-4 w-4 mr-1 md:h-6 md:w-6 md:mr-2 text-gold" />
+          add a review
+        </button>
+      </div>
+
+      <TestimonialForm showForm={showForm} setShowForm={setShowForm} />
 
       <div className="md:w-[55%] mx-auto">
         {testimonials.length > 0 && (
@@ -62,6 +75,20 @@ function Testimonial() {
               </SwiperSlide>
             ))}
           </Swiper>
+        )}
+        {testimonials.length == 0 && (
+          <div className="flex items-center flex-col md:flex-row">
+            <h5 className="text-sm md:text-2xl text-black/30 mx-auto text-center font-altDisplay">
+              Be the first to leave a review of Havilla's services.
+            </h5>
+            <button
+              onClick={() => setShowForm(true)}
+              className="btn text-xs md:text-sm underline underline-offset-2 decoration-purple text-black/70 font-semibold flex items-start"
+            >
+              <MessageSquarePlus className="h-4 w-4 mr-1 md:h-6 md:w-6 md:mr-2 text-gold" />
+              add a review
+            </button>
+          </div>
         )}
       </div>
     </section>

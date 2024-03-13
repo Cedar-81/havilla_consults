@@ -6,10 +6,14 @@ function Banner() {
     <motion.section
       initial={{ opacity: 0, y: -1000 }}
       animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-      className="w-full h-[30vh] relative flex justify-center items-center mt-[4rem]"
+      className="w-full h-[40vh] relative flex justify-center items-center mt-[4rem]"
     >
       <img
-        className="w-full h-full object-cover absolute top-0 right-0"
+        className="hidden md:block w-full h-full object-cover absolute top-0 right-0"
+        src="./assets/abtbannerlg.png"
+      />
+      <img
+        className="md:hidden w-full h-full object-cover absolute top-0 right-0"
         src="./assets/abtbanner.png"
       />
       <motion.h1

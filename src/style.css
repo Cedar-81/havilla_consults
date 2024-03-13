@@ -41,3 +41,8 @@
     font-size: 25px;
     color: #C3995D;
 }
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}

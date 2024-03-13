@@ -7,7 +7,7 @@ function About() {
     <section className="space-y-[80px]">
       <Banner />
       <Info />
-      <Team />
+      {/* <Team /> */}
     </section>
   );
 }
