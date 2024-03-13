@@ -81,11 +81,10 @@ function Hero() {
 
       <a href="mailto:info@havillaconsults.com">
         <motion.div
-          initial={{ x: 100, opacity: 0 }}
+          initial={{ opacity: 0 }}
           animate={{
-            x: 0,
             opacity: 1,
-            transition: { delay: 1.5, ease: easeInOut, duration: 0.5 },
+            transition: { delay: 2, ease: easeInOut, duration: 0.5 },
           }}
         >
           <motion.button
